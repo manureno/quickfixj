@@ -28,7 +28,7 @@ import org.quickfixj.CharsetSupport;
  * abstract but that would break compatibility with the QF JNI
  * classes.
  */
-public /*abstract*/ class Field<T> implements Serializable{
+public /*abstract*/ class Field<T> implements Serializable {
     static final long serialVersionUID = 7098326013456432197L;
     private int tag;
     private T object;
