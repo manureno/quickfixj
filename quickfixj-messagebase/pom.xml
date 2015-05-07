@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.quickfixj</groupId>
+		<artifactId>quickfixj-parent</artifactId>
+		<version>1.7.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>quickfixj-messagebase</artifactId>
+	<packaging>jar</packaging>
+
+	<name>QuickFIX/J Base classes used by generated code</name>
+	<description>
+		Utilities and base classes used by the code generated out of FIX dictionaries
+	</description>
+	<url>http://www.quickfixj.org</url>
+
+	<dependencies>
+		<!-- dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+			<version>3.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-project</artifactId>
+			<version>2.2.1</version>
+		</dependency -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-pmd-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

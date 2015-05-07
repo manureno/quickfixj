@@ -31,6 +31,7 @@
 		<module>quickfixj-codegenerator</module>
 		<module>quickfixj-dictgenerator</module>
 		<module>quickfixj-core</module>
+		<module>quickfixj-messagebase</module>
 		<module>quickfixj-messages</module>
 		<module>quickfixj-examples</module>
 		<module>quickfixj-all</module>
