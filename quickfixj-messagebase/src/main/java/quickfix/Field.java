@@ -115,7 +115,7 @@ public /*abstract*/ class Field<T> implements Serializable {
      */
     /*package*/ int getLength() {
         calculate();
-        return MessageUtils.length(CharsetSupport.getCharsetInstance(), data) + 1;
+        return CharsetSupport.length(CharsetSupport.getCharsetInstance(), data) + 1;
     }
 
     /**
@@ -126,7 +126,7 @@ public /*abstract*/ class Field<T> implements Serializable {
      */
     /*package*/ int getChecksum() {
         calculate();
-        return (MessageUtils.checksum(CharsetSupport.getCharsetInstance(), data, false) + 1) & 0xFF;
+        return (CharsetSupport.checksum(CharsetSupport.getCharsetInstance(), data, false) + 1) & 0xFF;
     }
 
     private void calculate() {

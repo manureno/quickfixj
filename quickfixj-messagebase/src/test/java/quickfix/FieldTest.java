@@ -19,28 +19,35 @@
 
 package quickfix;
 
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
+
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Date;
 
-import static junit.framework.Assert.assertTrue;
-import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
 import org.quickfixj.CharsetSupport;
-import quickfix.field.RawData;
-import quickfix.field.Side;
 
 public class FieldTest {
 
-    @Test
-    public void testMessageSetGetString() {
-        Side side1 = new Side(Side.BUY);
-        Side side2 = new Side(Side.BUY);
-        assertEquals(side1, side2);
+    private static final int SIDE_FIELD = 54;
+	private static final int RAWDATA_FIELD = 96;
 
-        side2 = new Side();
-        side2.setValue(Side.BUY);
+	@Test
+    public void testMessageSetGetString() {
+		
+    	// Manually Create a "Side"
+        CharField side1 = new CharField(SIDE_FIELD, '1');
+        CharField side2 = new CharField(SIDE_FIELD, '1');
+        
+        assertEquals(side1, side2);
+        
+        side1.setValue('2');
+        assertTrue(!side1.equals(side2));
+        
+        side2.setValue('2');
         assertEquals(side1, side2);
     }
 
@@ -227,9 +234,9 @@ public class FieldTest {
     public void testBytesField() {
         byte[] data = "rawdata".getBytes();
 
-        BytesField field = new BytesField(RawData.FIELD);
+        BytesField field = new BytesField(RAWDATA_FIELD);
         field.setValue(data);
-        assertEquals(RawData.FIELD, field.getTag());
+        assertEquals(RAWDATA_FIELD, field.getTag());
         assertTrue(Arrays.equals(data, field.getObject()));
 
         StringBuilder sb = new StringBuilder();

@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.CharsetSupport;
+
 import junit.framework.Assert;
 import junit.framework.TestCase;
 import quickfix.field.BeginString;
@@ -411,7 +413,7 @@ public class RepeatingGroupTest extends TestCase {
         }
 
         assertEquals("Message validation failed",
-                MessageUtils.checksum(sourceFIXString), MessageUtils.checksum(validatedFIXString));
+        		CharsetSupport.checksum(sourceFIXString), CharsetSupport.checksum(validatedFIXString));
     }
 
     public void testOutOfOrderGroupMembersDelimiterField() throws Exception {
