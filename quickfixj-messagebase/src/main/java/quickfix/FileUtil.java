@@ -33,19 +33,6 @@ public class FileUtil {
                 + pathSuffix;
     }
 
-    public static String sessionIdFileName(SessionID sessionID) {
-        return replaceIllegalCharactersInFileName(sessionID.getBeginString() + "-"
-                + sessionID.getSenderCompID() + optionalField("_", sessionID.getSenderSubID())
-                + optionalField("_", sessionID.getSenderLocationID()) + "-"
-                + sessionID.getTargetCompID() + optionalField("_", sessionID.getTargetSubID())
-                + optionalField("_", sessionID.getTargetLocationID())
-                + optionalField("-", sessionID.getSessionQualifier()));
-    }
-
-    private static String optionalField(String delim, String value) {
-        return !value.equals(SessionID.NOT_SET) ? delim + value : "";
-    }
-
     /**
      * QFJ-775
      * We replace some characters which are illegal on some file systems.
@@ -55,7 +42,7 @@ public class FileUtil {
      * using separate file store directories if your CompIDs contain
      * special characters different from dot, dash or underscore.
      */
-    private static String replaceIllegalCharactersInFileName(String fileName) {
+    public static String replaceIllegalCharactersInFileName(String fileName) {
         return fileName.replaceAll("[^a-zA-Z0-9.-]", "_");
     }
 
