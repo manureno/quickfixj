@@ -218,6 +218,18 @@ public class SessionIDTest extends TestCase {
         }
     }
 
+    // QFJ-775
+    public void testSessionIDFileName() {
+        SessionID sessionID = new SessionID(FixVersions.BEGINSTRING_FIX44, "SENDER???",
+                "bla_/--/#()_bla", "!!!TARGET", "foo::bar");
+        String sessionIdFileName = SessionID.sessionIdFileName(sessionID);
+        assertEquals("FIX.4.4-SENDER____bla__--_____bla-___TARGET_foo__bar", sessionIdFileName);
+        assertTrue(sessionIdFileName.matches("[a-zA-Z0-9-._]*"));
+
+        sessionID = new SessionID(FixVersions.BEGINSTRING_FIX44, "SENDER", "TARGET");
+        sessionIdFileName = SessionID.sessionIdFileName(sessionID);
+        assertEquals("FIX.4.4-SENDER-TARGET", sessionIdFileName);
+    }
     //    public void testFromString() throws Exception {
     //        SessionID sessionID = new SessionID((String) null, (String) null, (String) null);
     //        sessionID.fromString("FIX.4.2:SENDER->TARGET:QUALIFIER");

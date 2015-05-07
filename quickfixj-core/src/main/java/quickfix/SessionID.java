@@ -51,6 +51,19 @@ public class SessionID implements Serializable {
     private final String targetLocationID;
     private final String sessionQualifier;
 
+    public static String sessionIdFileName(SessionID sessionID) {
+        return FileUtil.replaceIllegalCharactersInFileName(sessionID.getBeginString() + "-"
+                + sessionID.getSenderCompID() + optionalField("_", sessionID.getSenderSubID())
+                + optionalField("_", sessionID.getSenderLocationID()) + "-"
+                + sessionID.getTargetCompID() + optionalField("_", sessionID.getTargetSubID())
+                + optionalField("_", sessionID.getTargetLocationID())
+                + optionalField("-", sessionID.getSessionQualifier()));
+    }
+    
+    private static String optionalField(String delim, String value) {
+        return !value.equals(SessionID.NOT_SET) ? delim + value : "";
+    }
+    
     public SessionID(String beginString, String senderCompID, String senderSubID,
             String senderLocationID, String targetCompID, String targetSubID,
             String targetLocationID, String sessionQualifier) {

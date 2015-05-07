@@ -804,7 +804,7 @@ public class SessionTest {
                 .getString(FileStoreFactory.SETTING_FILE_STORE_PATH);
         final String fullPath = new File(path == null ? "." : path)
                 .getAbsolutePath();
-        final String sessionName = FileUtil.sessionIdFileName(sessionID);
+        final String sessionName = SessionID.sessionIdFileName(sessionID);
         final String prefix = FileUtil.fileAppendPath(fullPath, sessionName
                 + ".");
         final String sessionFileName = prefix + "session";

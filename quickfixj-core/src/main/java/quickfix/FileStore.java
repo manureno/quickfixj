@@ -84,7 +84,7 @@ public class FileStore implements MessageStore, Closeable {
         }
 
         final String fullPath = new File(path == null ? "." : path).getAbsolutePath();
-        final String sessionName = FileUtil.sessionIdFileName(sessionID);
+        final String sessionName = SessionID.sessionIdFileName(sessionID);
         final String prefix = FileUtil.fileAppendPath(fullPath, sessionName + ".");
 
         msgFileName = prefix + "body";

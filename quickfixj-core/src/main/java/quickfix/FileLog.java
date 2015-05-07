@@ -58,7 +58,7 @@ public class FileLog extends AbstractLog {
     private final boolean includeTimestampForMessages;
 
     FileLog(String path, SessionID sessionID, boolean includeMillis, boolean includeTimestampForMessages, boolean logHeartbeats) throws FileNotFoundException {
-        String sessionName = FileUtil.sessionIdFileName(sessionID);
+        String sessionName = SessionID.sessionIdFileName(sessionID);
 
         setLogHeartbeats(logHeartbeats);
 
