@@ -66,4 +66,49 @@ public class CharsetSupport {
         }
         return charset;
     }
+    
+    public static int checksum(Charset charset, String data, boolean isEntireMessage) {
+        int sum = 0;
+        if (CharsetSupport.isStringEquivalent(charset)) { // optimization - skip encoding
+            int end = isEntireMessage ? data.lastIndexOf("\00110=") : -1;
+            int len = end > -1 ? end + 1 : data.length();
+            for (int i = 0; i < len; i++) {
+                sum += data.charAt(i);
+            }
+        } else {
+            byte[] bytes = data.getBytes(charset);
+            int len = bytes.length;
+            if (isEntireMessage && bytes[len - 8] == '\001' && bytes[len - 7] == '1'
+                    && bytes[len - 6] == '0' && bytes[len - 5] == '=')
+                len = len - 7;
+            for (int i = 0; i < len; i++) {
+                sum += (bytes[i] & 0xFF);
+            }
+        }
+        return sum & 0xFF; // better than sum % 256 since it avoids overflow issues
+    }
+    
+    /**
+     * Calculates the checksum for the given message
+     * (excluding existing checksum field, if one exists).
+     * The {@link CharsetSupport#setCharset global charset} is used.
+     *
+     * @param message the message to calculate the checksum on
+     * @return the calculated checksum
+     */
+    public static int checksum(String message) {
+        return CharsetSupport.checksum(CharsetSupport.getCharsetInstance(), message, true);
+    }
+    
+    /**
+     * Calculates the length of the byte representation
+     * of the given string in the given charset.
+     *
+     * @param charset the charset used in encoding the data
+     * @param data the data to calculate the length on
+     * @return the calculated length
+     */
+    public static int length(Charset charset, String data) {
+        return CharsetSupport.isStringEquivalent(charset) ? data.length() : data.getBytes(charset).length;
+    }
 }

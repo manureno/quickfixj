@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 import junit.framework.AssertionFailedError;
 import junit.framework.TestResult;
 
+import org.quickfixj.CharsetSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -90,7 +91,7 @@ public class InitiateMessageStep implements TestStep {
             message = data.substring(1);
         }
         if (!message.contains("\00110=")) {
-            message += "10=" + CHECKSUM_FORMAT.format(MessageUtils.checksum(message)) + '\001';
+            message += "10=" + CHECKSUM_FORMAT.format(CharsetSupport.checksum(message)) + '\001';
         }
         log.debug("sending to client " + clientId + ": " + message);
         try {

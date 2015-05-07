@@ -222,7 +222,7 @@ public class MessageTest {
         CharsetSupport.setCharset(charset);
         try {
             NewOrderSingle order = createNewOrderSingle();
-            order.set(new EncodedTextLen(MessageUtils.length(CharsetSupport.getCharsetInstance(), text)));
+            order.set(new EncodedTextLen(CharsetSupport.length(CharsetSupport.getCharsetInstance(), text)));
             order.set(new EncodedText(text));
             final Message msg = new Message(order.toString(), DataDictionaryTest.getDictionary());
             assertEquals(charset + " encoded field", text, msg.getString(EncodedText.FIELD));

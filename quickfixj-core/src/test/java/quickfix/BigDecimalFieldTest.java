@@ -19,13 +19,12 @@
 
 package quickfix;
 
+import java.lang.reflect.Constructor;
+import java.math.BigDecimal;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-
-import java.math.BigDecimal;
-import java.lang.reflect.Constructor;
-
 import quickfix.field.Price;
 import quickfix.fix42.NewOrderSingle;
 

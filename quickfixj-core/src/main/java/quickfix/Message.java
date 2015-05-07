@@ -486,9 +486,9 @@ public class Message extends FieldMap {
         try {
             // Body length is checked at the protocol layer
             final int checksum = trailer.getInt(CheckSum.FIELD);
-            if (checksum != MessageUtils.checksum(messageData)) {
+            if (checksum != CharsetSupport.checksum(messageData)) {
                 // message will be ignored if checksum is wrong or missing
-                throw new InvalidMessage("Expected CheckSum=" + MessageUtils.checksum(messageData)
+                throw new InvalidMessage("Expected CheckSum=" + CharsetSupport.checksum(messageData)
                         + ", Received CheckSum=" + checksum + " in " + messageData);
             }
         } catch (final FieldNotFound e) {
