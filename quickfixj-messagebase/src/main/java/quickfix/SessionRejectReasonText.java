@@ -21,10 +21,31 @@ package quickfix;
 
 import java.util.HashMap;
 
-import quickfix.field.SessionRejectReason;
 
-class SessionRejectReasonText extends SessionRejectReason {
+class SessionRejectReasonText  {
     private static final HashMap<Integer, String> rejectReasonText = new HashMap<Integer, String>();
+    
+    private static final int FIELD = 373;
+    private static final int INVALID_TAG_NUMBER = 0;
+    private static final int REQUIRED_TAG_MISSING = 1;
+    private static final int TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE = 2;
+    private static final int UNDEFINED_TAG = 3;
+    private static final int TAG_SPECIFIED_WITHOUT_A_VALUE = 4;
+    private static final int VALUE_IS_INCORRECT = 5;
+    private static final int INCORRECT_DATA_FORMAT_FOR_VALUE = 6;
+    private static final int DECRYPTION_PROBLEM = 7;
+    private static final int SIGNATURE_PROBLEM = 8;
+    private static final int COMPID_PROBLEM = 9;
+    private static final int SENDINGTIME_ACCURACY_PROBLEM = 10;
+    private static final int INVALID_MSGTYPE = 11;
+    private static final int XML_VALIDATION_ERROR = 12;
+    private static final int TAG_APPEARS_MORE_THAN_ONCE = 13;
+    private static final int TAG_SPECIFIED_OUT_OF_REQUIRED_ORDER = 14;
+    private static final int REPEATING_GROUP_FIELDS_OUT_OF_ORDER = 15;
+    private static final int INCORRECT_NUMINGROUP_COUNT_FOR_REPEATING_GROUP = 16;
+    private static final int NON_DATA_VALUE_INCLUDES_FIELD_DELIMITER = 17;
+    private static final int INVALID_UNSUPPORTED_APPLICATION_VERSION = 18;
+    private static final int OTHER = 99;
 
     static {
         rejectReasonText.put(INVALID_TAG_NUMBER, "Invalid tag number");
