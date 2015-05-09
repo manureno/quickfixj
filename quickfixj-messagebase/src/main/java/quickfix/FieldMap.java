@@ -30,10 +30,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import quickfix.field.BeginString;
-import quickfix.field.BodyLength;
-import quickfix.field.CheckSum;
-import quickfix.field.SessionRejectReason;
+import static quickfix.FieldDictionary.*;
+
 import quickfix.field.converter.BooleanConverter;
 import quickfix.field.converter.CharConverter;
 import quickfix.field.converter.DecimalConverter;
@@ -334,7 +332,7 @@ public abstract class FieldMap implements Serializable {
         } else if (returnField instanceof BytesField) {
             return (BytesField) returnField;
         } else {
-            throw new FieldException(SessionRejectReason.INCORRECT_DATA_FORMAT_FOR_VALUE,
+            throw new FieldException(SESSIONREJECTREASON_INCORRECT_DATA_FORMAT_FOR_VALUE,
                     field.getField());
         }
     }
@@ -376,7 +374,7 @@ public abstract class FieldMap implements Serializable {
     }
 
     private FieldException newIncorrectDataException(FieldConvertError e, int tag) {
-        return new FieldException(SessionRejectReason.INCORRECT_DATA_FORMAT_FOR_VALUE,
+        return new FieldException(SESSIONREJECTREASON_INCORRECT_DATA_FORMAT_FOR_VALUE,
                 e.getMessage(), tag);
     }
 
@@ -469,8 +467,8 @@ public abstract class FieldMap implements Serializable {
         int result = 0;
         for (final Field<?> field : fields.values()) {
             int tag = field.getField();
-            if (tag != BeginString.FIELD && tag != BodyLength.FIELD
-                    && tag != CheckSum.FIELD && !isGroupField(tag)) {
+            if (tag != BEGINSTRING_FIELD && tag != BODYLENGTH_FIELD
+                    && tag != CHECKSUM_FIELD && !isGroupField(tag)) {
                 result += field.getLength();
             }
         }
@@ -492,7 +490,7 @@ public abstract class FieldMap implements Serializable {
     int calculateChecksum() {
         int result = 0;
         for (final Field<?> field : fields.values()) {
-            if (field.getField() != CheckSum.FIELD && !isGroupField(field.getField())) {
+            if (field.getField() != CHECKSUM_FIELD && !isGroupField(field.getField())) {
                 result += field.getChecksum();
             }
         }
