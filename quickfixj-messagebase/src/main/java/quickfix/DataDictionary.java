@@ -44,9 +44,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import quickfix.field.BeginString;
-import quickfix.field.MsgType;
-import quickfix.field.SessionRejectReason;
+import static quickfix.FieldDictionary.*;
+
+
 import quickfix.field.converter.BooleanConverter;
 import quickfix.field.converter.CharConverter;
 import quickfix.field.converter.DoubleConverter;
@@ -585,7 +585,7 @@ public class DataDictionary {
      * @throws FieldNotFound if a field cannot be found
      * @throws IncorrectDataFormat
      */
-    public void validate(Message message) throws IncorrectTagValue, FieldNotFound,
+    /*package*/ void validate(Message message) throws IncorrectTagValue, FieldNotFound,
             IncorrectDataFormat {
         validate(message, false);
     }
@@ -611,10 +611,10 @@ public class DataDictionary {
 
         if (isVersionSpecified(sessionDataDictionary)
                 && !sessionDataDictionary.getVersion().equals(
-                        message.getHeader().getString(BeginString.FIELD))
-                && !message.getHeader().getString(BeginString.FIELD).equals("FIXT.1.1")
+                        message.getHeader().getString(BEGINSTRING_FIELD))
+                && !message.getHeader().getString(BEGINSTRING_FIELD).equals("FIXT.1.1")
                 && !sessionDataDictionary.getVersion().equals("FIX.5.0")) {
-            throw new UnsupportedVersion("Message version '" + message.getHeader().getString(BeginString.FIELD)
+            throw new UnsupportedVersion("Message version '" + message.getHeader().getString(BEGINSTRING_FIELD)
                     + "' does not match the data dictionary version '" + sessionDataDictionary.getVersion() + "'");
         }
 
@@ -622,7 +622,7 @@ public class DataDictionary {
             throw message.getException();
         }
 
-        final String msgType = message.getHeader().getString(MsgType.FIELD);
+        final String msgType = message.getHeader().getString(MSGTYPE_FIELD);
         if (isVersionSpecified(applicationDataDictionary)) {
             applicationDataDictionary.checkMsgType(msgType);
             applicationDataDictionary.checkHasRequired(message.getHeader(), message,
@@ -676,7 +676,7 @@ public class DataDictionary {
         if (!isMsgType(msgType)) {
             // It would be better to include the msgType in exception message
             // Doing that will break acceptance tests
-            throw new FieldException(SessionRejectReason.INVALID_MSGTYPE);
+            throw new FieldException(SessionRejectReasonText.INVALID_MSGTYPE);
         }
     }
 
@@ -688,7 +688,7 @@ public class DataDictionary {
     // / Check if field tag number is defined in spec.
     void checkValidTagNumber(Field<?> field) {
         if (!fields.contains(Integer.valueOf(field.getTag()))) {
-            throw new FieldException(SessionRejectReason.INVALID_TAG_NUMBER, field.getField());
+            throw new FieldException(SessionRejectReasonText.INVALID_TAG_NUMBER, field.getField());
         }
     }
 
@@ -768,7 +768,7 @@ public class DataDictionary {
     // / Check if a field has a value.
     private void checkHasValue(StringField field) {
         if (checkFieldsHaveValues && field.getValue().length() == 0) {
-            throw new FieldException(SessionRejectReason.TAG_SPECIFIED_WITHOUT_A_VALUE,
+            throw new FieldException(SessionRejectReasonText.TAG_SPECIFIED_WITHOUT_A_VALUE,
                     field.getField());
         }
     }
@@ -776,7 +776,7 @@ public class DataDictionary {
     // / Check if a field is in this message type.
     private void checkIsInMessage(Field<?> field, String msgType) {
         if (!isMsgField(msgType, field.getField()) && !allowUnknownMessageFields) {
-            throw new FieldException(SessionRejectReason.TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE,
+            throw new FieldException(SessionRejectReasonText.TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE,
                     field.getField());
         }
     }
@@ -787,7 +787,7 @@ public class DataDictionary {
         if (isGroup(msgType, fieldNum)) {
             if (fieldMap.getGroupCount(fieldNum) != Integer.parseInt(field.getValue())) {
                 throw new FieldException(
-                        SessionRejectReason.INCORRECT_NUMINGROUP_COUNT_FOR_REPEATING_GROUP,
+                		SessionRejectReasonText.INCORRECT_NUMINGROUP_COUNT_FOR_REPEATING_GROUP,
                         fieldNum);
             }
         }
@@ -812,7 +812,7 @@ public class DataDictionary {
 
         for (int field : requiredFieldsForMessage) {
             if (!fields.isSetField(field)) {
-                throw new FieldException(SessionRejectReason.REQUIRED_TAG_MISSING, field);
+                throw new FieldException(SessionRejectReasonText.REQUIRED_TAG_MISSING, field);
             }
         }
 
@@ -1003,7 +1003,7 @@ public class DataDictionary {
                 addMsgType(msgtype, name);
 
                 if (name != null) {
-                    addValueName(MsgType.FIELD, msgtype, name);
+                    addValueName(MSGTYPE_FIELD, msgtype, name);
                 }
 
                 load(document, msgtype, messageNode);

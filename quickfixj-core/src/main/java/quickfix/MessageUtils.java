@@ -19,14 +19,13 @@
 
 package quickfix;
 
-import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.quickfixj.CharsetSupport;
 import org.quickfixj.QFJException;
 
 import quickfix.Message.Header;
+
 import quickfix.field.ApplVerID;
 import quickfix.field.BeginString;
 import quickfix.field.DefaultApplVerID;
@@ -39,8 +38,6 @@ import quickfix.field.TargetLocationID;
 import quickfix.field.TargetSubID;
 
 public class MessageUtils {
-
-    private static final char FIELD_SEPARATOR = '\001';
 
     public static SessionID getSessionID(Message fixMessage) {
         final Header header = fixMessage.getHeader();
@@ -103,7 +100,7 @@ public class MessageUtils {
      */
     public static Message parse(MessageFactory messageFactory, DataDictionary dataDictionary,
             String messageString) throws InvalidMessage {
-        final int index = messageString.indexOf(FIELD_SEPARATOR);
+        final int index = messageString.indexOf(Message.FIELD_SEPARATOR);
         if (index < 0) {
             throw new InvalidMessage("Message does not contain any field separator");
         }
@@ -182,7 +179,7 @@ public class MessageUtils {
     }
 
     public static boolean isAdminMessage(String msgType) {
-        return msgType.length() == 1 && "0A12345".contains(msgType);
+        return Message.isAdminMessage(msgType);
     }
 
     public static boolean isHeartbeat(String message) {
@@ -202,37 +199,11 @@ public class MessageUtils {
     }
 
     public static String getMessageType(String messageString) throws InvalidMessage {
-        final String value = getStringField(messageString, 35);
-        if (value == null) {
-            throw new InvalidMessage("Missing or garbled message type in " + messageString);
-        }
-        return value;
+        return Message.getMessageType(messageString);
     }
 
     public static String getStringField(String messageString, int tag) {
-        String value = null;
-        final String tagString = Integer.toString(tag);
-        int start = messageString.indexOf(tagString, 0);
-        while (start != -1 && value == null) {
-            if ((start == 0 || messageString.charAt(start - 1) == FIELD_SEPARATOR)) {
-                int end = start + tagString.length();
-                if ((end + 1) < messageString.length() && messageString.charAt(end) == '=') {
-                    // found tag, get value
-                    start = end = (end + 1);
-                    while (end < messageString.length()
-                            && messageString.charAt(end) != FIELD_SEPARATOR) {
-                        end++;
-                    }
-                    if (end == messageString.length()) {
-                        return null;
-                    } else {
-                        value = messageString.substring(start, end);
-                    }
-                }
-            }
-            start = messageString.indexOf(tagString, start + 1);
-        }
-        return value;
+    	return Message.getStringField(messageString, tag);
     }
 
     private static final Map<String, String> applVerIDtoBeginString = new HashMap<String, String>() {

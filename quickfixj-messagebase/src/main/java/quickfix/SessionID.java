@@ -23,14 +23,6 @@ import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import quickfix.field.BeginString;
-import quickfix.field.SenderCompID;
-import quickfix.field.SenderLocationID;
-import quickfix.field.SenderSubID;
-import quickfix.field.TargetCompID;
-import quickfix.field.TargetLocationID;
-import quickfix.field.TargetSubID;
-
 /**
  * Identifier for a session. Only supports a company ID (target, sender)
  * and a session qualifier. Sessions are also identified by FIX version so
@@ -78,12 +70,7 @@ public class SessionID implements Serializable {
         id = createID();
     }
 
-    public SessionID(BeginString beginString, SenderCompID senderCompID, SenderSubID senderSubID,
-            SenderLocationID senderLocationID, TargetCompID targetCompID, TargetSubID targetSubID,
-            TargetLocationID targetLocationID, String qualifier) {
-        this(value(beginString), value(senderCompID), value(senderSubID), value(senderLocationID),
-                value(targetCompID), value(targetSubID), value(targetLocationID), value(qualifier));
-    }
+   
 
     public SessionID(String beginString, String senderCompID, String senderSubID,
             String targetCompID, String targetSubID) {
@@ -91,27 +78,13 @@ public class SessionID implements Serializable {
                 NOT_SET);
     }
 
-    public SessionID(BeginString beginString, SenderCompID senderCompID, SenderSubID senderSubID,
-            TargetCompID targetCompID, TargetSubID targetSubID) {
-        this(value(beginString), value(senderCompID), value(senderSubID), value(targetCompID),
-                value(targetSubID));
-    }
 
     public SessionID(String beginString, String senderCompID, String targetCompID, String qualifier) {
         this(beginString, senderCompID, NOT_SET, NOT_SET, targetCompID, NOT_SET, NOT_SET, qualifier);
     }
 
-    public SessionID(BeginString beginString, SenderCompID senderCompID, TargetCompID targetCompID,
-            String qualifier) {
-        this(value(beginString), value(senderCompID), value(targetCompID), value(qualifier));
-    }
-
     public SessionID(String beginString, String senderCompID, String targetCompID) {
         this(beginString, senderCompID, NOT_SET, NOT_SET, targetCompID, NOT_SET, NOT_SET, NOT_SET);
-    }
-
-    public SessionID(BeginString beginString, SenderCompID senderCompID, TargetCompID targetCompID) {
-        this(value(beginString), value(senderCompID), value(targetCompID));
     }
 
     public SessionID() {
@@ -203,9 +176,7 @@ public class SessionID implements Serializable {
         return !value.equals(NOT_SET);
     }
 
-    private static String value(StringField f) {
-        return f != null ? f.getValue() : NOT_SET;
-    }
+   
 
     private static String value(String s) {
         return s == null ? NOT_SET : s;

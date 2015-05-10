@@ -332,7 +332,7 @@ public abstract class FieldMap implements Serializable {
         } else if (returnField instanceof BytesField) {
             return (BytesField) returnField;
         } else {
-            throw new FieldException(SESSIONREJECTREASON_INCORRECT_DATA_FORMAT_FOR_VALUE,
+            throw new FieldException(SessionRejectReasonText.INCORRECT_DATA_FORMAT_FOR_VALUE,
                     field.getField());
         }
     }
@@ -374,7 +374,7 @@ public abstract class FieldMap implements Serializable {
     }
 
     private FieldException newIncorrectDataException(FieldConvertError e, int tag) {
-        return new FieldException(SESSIONREJECTREASON_INCORRECT_DATA_FORMAT_FOR_VALUE,
+        return new FieldException(SessionRejectReasonText.INCORRECT_DATA_FORMAT_FOR_VALUE,
                 e.getMessage(), tag);
     }
 
