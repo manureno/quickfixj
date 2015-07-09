@@ -42,7 +42,7 @@ public class SerializationTest extends TestCase {
     public void testSerializationWithDataDictionary() throws Exception {
         Message message = new Message("8=FIX.4.2\0019=40\00135=A\001"
                 + "98=0\001384=2\001372=D\001385=R\001372=8\001385=S\00110=96\001",
-                DataDictionaryTest.getDictionary());
+                getDictionary());
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         ObjectOutputStream outs = new ObjectOutputStream(out);
         outs.writeObject(message);
@@ -344,5 +344,21 @@ public class SerializationTest extends TestCase {
                 }
             }
         }
+    }
+	
+	/**
+     * Returns a FIX 4.4 data dictionary.
+     * NOTE: the returned dictionary must not be modified in any way
+     * (e.g. by calling any of its setter methods). If it needs to
+     * be modified, it can be cloned by using the
+     * {@link DataDictionary#DataDictionary(DataDictionary)
+     * DataDictionary copy constructor}.
+     *
+     * @return a FIX 4.4 data dictionary
+     * @throws Exception if the data dictionary cannot be loaded
+     */
+	public static DataDictionary getDictionary() throws Exception {
+        return new DataDictionary(SerializationTest.class.getClassLoader()
+                .getResourceAsStream("FIX44.xml"));
     }
 }
