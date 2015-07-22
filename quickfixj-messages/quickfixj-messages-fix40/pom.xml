@@ -35,6 +35,10 @@
 							<sources>
 								<source>${project.basedir}/../quickfixj-messages-all/target/generated-sources/</source>
 							</sources>
+							<dictFile>./src/main/resources/FIX40.xml</dictFile>
+							<packaging>quickfix.fix40</packaging>
+							<fieldPackage>quickfix.field</fieldPackage>
+							<decimal>${generator.decimal}</decimal>
 						</configuration>
 					</execution>
 				</executions>
