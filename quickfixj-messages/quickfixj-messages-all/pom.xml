@@ -14,13 +14,7 @@
 	<description>QuickFIX/J Message classes for all FIX specifications</description>
 	<url>http://www.quickfixj.org</url>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.quickfixj</groupId>
-			<artifactId>quickfixj-core</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		
+	<dependencies>		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
