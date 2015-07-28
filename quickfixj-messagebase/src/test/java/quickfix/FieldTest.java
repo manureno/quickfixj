@@ -28,7 +28,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 import org.junit.Test;
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
 
 public class FieldTest {
 

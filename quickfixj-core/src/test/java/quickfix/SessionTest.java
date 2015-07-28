@@ -28,6 +28,11 @@ import java.util.TimeZone;
 
 import org.junit.AfterClass;
 import org.junit.Test;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.SystemTime;
 
 import quickfix.field.ApplVerID;
 import quickfix.field.BeginSeqNo;
@@ -50,7 +55,6 @@ import quickfix.field.SessionStatus;
 import quickfix.field.TargetCompID;
 import quickfix.field.TestReqID;
 import quickfix.field.Text;
-import quickfix.field.converter.UtcTimestampConverter;
 import quickfix.fix44.Heartbeat;
 import quickfix.fix44.Logon;
 import quickfix.fix44.Logout;

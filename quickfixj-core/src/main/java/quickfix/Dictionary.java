@@ -22,6 +22,9 @@ package quickfix;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Name/value pairs used for specifying groups of settings.
  *

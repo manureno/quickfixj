@@ -37,17 +37,17 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.mina.core.filterchain.IoFilterChainBuilder;
 import org.apache.mina.core.session.IoSession;
+import org.quickfixj.field.converter.IntConverter;
+import org.quickfixj.util.ConfigError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import quickfix.ConfigError;
 import quickfix.Connector;
 import quickfix.FieldConvertError;
 import quickfix.Session;
 import quickfix.SessionFactory;
 import quickfix.SessionID;
 import quickfix.SessionSettings;
-import quickfix.field.converter.IntConverter;
 
 /**
  * An abstract base class for acceptors and initiators. Provides support for common functionality and also serves as an

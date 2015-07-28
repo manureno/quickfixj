@@ -24,15 +24,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.CountDownLatch;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.RuntimeError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import quickfix.Application;
-import quickfix.ConfigError;
 import quickfix.DefaultMessageFactory;
 import quickfix.DoNotSend;
 import quickfix.FieldNotFound;
-import quickfix.FixVersions;
 import quickfix.IncorrectDataFormat;
 import quickfix.IncorrectTagValue;
 import quickfix.Initiator;
@@ -41,7 +42,6 @@ import quickfix.Message;
 import quickfix.MessageCracker;
 import quickfix.MessageStoreFactory;
 import quickfix.RejectLogon;
-import quickfix.RuntimeError;
 import quickfix.ScreenLogFactory;
 import quickfix.SessionID;
 import quickfix.SessionNotFound;

@@ -21,7 +21,8 @@ package quickfix;
 
 import java.io.PrintStream;
 
-import quickfix.field.converter.UtcTimestampConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.SystemTime;
 
 /**
  * Screen log implementation. THIS CLASS IS PUBLIC ONLY TO MAINTAIN COMPATIBILITY WITH THE QUICKFIX JNI. IT SHOULD ONLY

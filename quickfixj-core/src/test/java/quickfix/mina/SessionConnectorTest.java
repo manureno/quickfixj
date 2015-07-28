@@ -28,13 +28,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.RuntimeError;
+
 import junit.framework.TestCase;
 import quickfix.Acceptor;
-import quickfix.ConfigError;
 import quickfix.DefaultSessionFactory;
-import quickfix.FixVersions;
 import quickfix.MemoryStoreFactory;
-import quickfix.RuntimeError;
 import quickfix.ScreenLogFactory;
 import quickfix.Session;
 import quickfix.SessionFactory;

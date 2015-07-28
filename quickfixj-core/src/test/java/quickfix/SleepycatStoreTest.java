@@ -22,6 +22,8 @@ package quickfix;
 import java.io.File;
 import java.io.IOException;
 
+import org.quickfixj.util.ConfigError;
+
 public class SleepycatStoreTest extends AbstractMessageStoreTest {
     protected MessageStoreFactory getMessageStoreFactory() throws ConfigError, FieldConvertError {
         SessionSettings settings = new SessionSettings(getConfigurationFileName());

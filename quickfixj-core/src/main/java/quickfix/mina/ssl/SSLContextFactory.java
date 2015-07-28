@@ -15,10 +15,9 @@ import java.util.Map;
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 
+import org.quickfixj.util.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import quickfix.FileUtil;
 
 /**
  * SSL context factory that deals with Keystores.

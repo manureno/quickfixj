@@ -26,6 +26,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import org.quickfixj.util.ConfigError;
+
 import quickfix.field.ApplVerID;
 import quickfix.field.DefaultApplVerID;
 

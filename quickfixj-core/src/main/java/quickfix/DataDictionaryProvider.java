@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.FixVersions;
+
 import quickfix.field.ApplVerID;
 
 /**

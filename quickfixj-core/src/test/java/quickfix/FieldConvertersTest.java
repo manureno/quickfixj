@@ -24,13 +24,13 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-import quickfix.field.converter.BooleanConverter;
-import quickfix.field.converter.CharConverter;
-import quickfix.field.converter.DoubleConverter;
-import quickfix.field.converter.IntConverter;
-import quickfix.field.converter.UtcDateOnlyConverter;
-import quickfix.field.converter.UtcTimeOnlyConverter;
-import quickfix.field.converter.UtcTimestampConverter;
+import org.quickfixj.field.converter.BooleanConverter;
+import org.quickfixj.field.converter.CharConverter;
+import org.quickfixj.field.converter.DoubleConverter;
+import org.quickfixj.field.converter.IntConverter;
+import org.quickfixj.field.converter.UtcDateOnlyConverter;
+import org.quickfixj.field.converter.UtcTimeOnlyConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
 
 import junit.framework.TestCase;
 

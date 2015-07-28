@@ -25,6 +25,8 @@ import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

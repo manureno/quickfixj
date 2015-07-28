@@ -22,6 +22,8 @@ package quickfix;
 import java.io.IOException;
 import java.util.Date;
 
+import org.quickfixj.util.ConfigError;
+
 public class CachedFileStoreTest extends AbstractMessageStoreTest {
 
     protected void tearDown() throws Exception {

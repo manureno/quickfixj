@@ -25,6 +25,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 
+import org.quickfixj.util.SystemTime;
 import org.slf4j.LoggerFactory;
 
 /**

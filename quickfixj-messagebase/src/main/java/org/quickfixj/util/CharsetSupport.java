@@ -17,7 +17,7 @@
  * are not clear to you.
  ******************************************************************************/
 
-package org.quickfixj;
+package org.quickfixj.util;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;

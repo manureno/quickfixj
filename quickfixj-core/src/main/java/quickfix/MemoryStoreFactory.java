@@ -21,6 +21,8 @@ package quickfix;
 
 import java.io.IOException;
 
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Creates a message store that stores all data in memory.
  *

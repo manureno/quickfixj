@@ -27,6 +27,8 @@ import java.util.regex.Pattern;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
 
 import quickfix.field.ApplVerID;
 import quickfix.test.acceptance.ATApplication;

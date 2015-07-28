@@ -17,7 +17,7 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix.field.converter;
+package org.quickfixj.field.converter;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -25,8 +25,9 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.concurrent.*;
 
+import org.quickfixj.util.SystemTime;
+
 import quickfix.FieldConvertError;
-import quickfix.SystemTime;
 
 /**
  * Convert between a timestamp and a String. A timestamp includes both a date

@@ -17,7 +17,7 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix;
+package org.quickfixj.util;
 
 import java.util.Calendar;
 import java.util.Date;

@@ -25,6 +25,8 @@ import java.util.concurrent.TimeUnit;
 
 import junit.framework.TestCase;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

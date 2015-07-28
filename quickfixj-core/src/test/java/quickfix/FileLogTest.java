@@ -28,9 +28,9 @@ import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.quickfixj.CharsetSupport;
-
-import quickfix.field.converter.UtcTimestampConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.SystemTime;
 
 public class FileLogTest {
 

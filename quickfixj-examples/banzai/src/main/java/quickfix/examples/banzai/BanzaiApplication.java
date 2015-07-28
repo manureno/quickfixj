@@ -27,11 +27,12 @@ import java.util.Observer;
 
 import javax.swing.SwingUtilities;
 
+import org.quickfixj.util.FixVersions;
+
 import quickfix.Application;
 import quickfix.DefaultMessageFactory;
 import quickfix.DoNotSend;
 import quickfix.FieldNotFound;
-import quickfix.FixVersions;
 import quickfix.IncorrectDataFormat;
 import quickfix.IncorrectTagValue;
 import quickfix.Message;

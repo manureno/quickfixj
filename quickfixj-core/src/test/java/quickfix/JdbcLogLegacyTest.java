@@ -21,6 +21,8 @@ package quickfix;
 
 import java.sql.Connection;
 
+import org.quickfixj.util.ConfigError;
+
 public class JdbcLogLegacyTest extends JdbcLogTest {
 
     protected void initializeTableDefinitions(Connection connection) throws ConfigError {

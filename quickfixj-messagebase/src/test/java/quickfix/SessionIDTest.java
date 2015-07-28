@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.FixVersions;
+
 import junit.framework.TestCase;
 
 public class SessionIDTest extends TestCase {

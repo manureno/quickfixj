@@ -24,15 +24,15 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import quickfix.ConfigError;
 import quickfix.DataDictionaryProvider;
 import quickfix.DoNotSend;
 import quickfix.FieldConvertError;
 import quickfix.FieldNotFound;
-import quickfix.FixVersions;
 import quickfix.IncorrectDataFormat;
 import quickfix.IncorrectTagValue;
 import quickfix.LogUtil;

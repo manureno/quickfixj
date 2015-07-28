@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.ConfigError;
+
 /**
  * Creates a Session based on the specified settings.
  */

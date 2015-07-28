@@ -39,11 +39,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import quickfix.field.converter.UtcTimestampConverter;
 
 /**
  * File store implementation. THIS CLASS IS PUBLIC ONLY TO MAINTAIN COMPATIBILITY WITH THE QUICKFIX JNI. IT SHOULD ONLY

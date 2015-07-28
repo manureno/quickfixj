@@ -30,6 +30,8 @@ import java.util.TimeZone;
 
 import javax.sql.DataSource;
 
+import org.quickfixj.util.SystemTime;
+
 class JdbcStore implements MessageStore {
     private final static String DEFAULT_SESSION_TABLE_NAME = "sessions";
     private final static String DEFAULT_MESSAGE_TABLE_NAME = "messages";

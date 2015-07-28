@@ -30,11 +30,12 @@ import java.util.Set;
 
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.buffer.SimpleBufferAllocator;
+import org.quickfixj.field.converter.BooleanConverter;
+import org.quickfixj.util.ConfigError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import quickfix.Application;
-import quickfix.ConfigError;
 import quickfix.DefaultSessionFactory;
 import quickfix.FieldConvertError;
 import quickfix.Initiator;
@@ -45,7 +46,6 @@ import quickfix.Session;
 import quickfix.SessionFactory;
 import quickfix.SessionID;
 import quickfix.SessionSettings;
-import quickfix.field.converter.BooleanConverter;
 import quickfix.mina.EventHandlingStrategy;
 import quickfix.mina.NetworkingOptions;
 import quickfix.mina.ProtocolFactory;

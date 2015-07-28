@@ -23,6 +23,9 @@ import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.FixVersions;
+
 /**
  * Identifier for a session. Only supports a company ID (target, sender)
  * and a session qualifier. Sessions are also identified by FIX version so

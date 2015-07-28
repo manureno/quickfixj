@@ -30,16 +30,17 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import static quickfix.FieldDictionary.*;
+import org.quickfixj.field.converter.BooleanConverter;
+import org.quickfixj.field.converter.CharConverter;
+import org.quickfixj.field.converter.DecimalConverter;
+import org.quickfixj.field.converter.DoubleConverter;
+import org.quickfixj.field.converter.IntConverter;
+import org.quickfixj.field.converter.UtcDateOnlyConverter;
+import org.quickfixj.field.converter.UtcTimeOnlyConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.RuntimeError;
 
-import quickfix.field.converter.BooleanConverter;
-import quickfix.field.converter.CharConverter;
-import quickfix.field.converter.DecimalConverter;
-import quickfix.field.converter.DoubleConverter;
-import quickfix.field.converter.IntConverter;
-import quickfix.field.converter.UtcDateOnlyConverter;
-import quickfix.field.converter.UtcTimeOnlyConverter;
-import quickfix.field.converter.UtcTimestampConverter;
+import static quickfix.FieldDictionary.*;
 
 /**
  * Field container used by messages, groups, and composites.

@@ -21,6 +21,9 @@ package quickfix;
 
 import java.util.ArrayList;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Common base interface for acceptors and initiators.
  */

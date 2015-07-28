@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.SystemTime;
+
 import junit.framework.TestCase;
 
 public class SessionStateTest extends TestCase {

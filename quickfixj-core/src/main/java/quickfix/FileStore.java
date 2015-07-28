@@ -37,9 +37,10 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.quickfixj.CharsetSupport;
-
-import quickfix.field.converter.UtcTimestampConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.SystemTime;
 
 /**
  * File store implementation. THIS CLASS IS PUBLIC ONLY TO MAINTAIN

@@ -32,7 +32,8 @@ import javax.management.MBeanException;
 import javax.management.MBeanInfo;
 import javax.management.ReflectionException;
 
-import quickfix.ConfigError;
+import org.quickfixj.util.ConfigError;
+
 import quickfix.SessionID;
 import quickfix.SessionSettings;
 

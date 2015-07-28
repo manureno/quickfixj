@@ -32,8 +32,9 @@ import java.util.Date;
 import java.util.TimeZone;
 
 import org.junit.Test;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FixVersions;
 
-import org.quickfixj.CharsetSupport;
 import quickfix.field.Account;
 import quickfix.field.AllocAccount;
 import quickfix.field.AllocShares;

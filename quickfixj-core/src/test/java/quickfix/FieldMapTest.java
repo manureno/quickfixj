@@ -5,10 +5,11 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import quickfix.field.EffectiveTime;
 import quickfix.field.MDEntryTime;
-import quickfix.field.converter.UtcTimeOnlyConverter;
 
 import java.util.Date;
 import java.util.Iterator;
+
+import org.quickfixj.field.converter.UtcTimeOnlyConverter;
 
 /**
  * Tests the {@link FieldMap} class.

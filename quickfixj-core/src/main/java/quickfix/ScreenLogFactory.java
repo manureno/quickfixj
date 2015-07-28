@@ -19,6 +19,9 @@
 
 package quickfix;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Creates a logger that logs messages to to System.out. TThe logged message
  * categories (incoming, outgoing, events) can be controlled using

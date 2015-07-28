@@ -42,6 +42,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import org.quickfixj.util.ConfigError;
+
 public class JdbcStoreTest extends AbstractMessageStoreTest {
     private String initialContextFactory;
 

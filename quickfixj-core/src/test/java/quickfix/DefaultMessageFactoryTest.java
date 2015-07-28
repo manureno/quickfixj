@@ -1,7 +1,7 @@
 package quickfix;
 
 import static org.junit.Assert.*;
-import static quickfix.FixVersions.*;
+import static org.quickfixj.util.FixVersions.*;
 
 import org.junit.Test;
 

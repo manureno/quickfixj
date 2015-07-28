@@ -19,10 +19,10 @@
 
 package quickfix;
 
-import static quickfix.FileUtil.Location.CLASSLOADER_RESOURCE;
-import static quickfix.FileUtil.Location.CONTEXT_RESOURCE;
-import static quickfix.FileUtil.Location.FILESYSTEM;
-import static quickfix.FileUtil.Location.URL;
+import static org.quickfixj.util.FileUtil.Location.CLASSLOADER_RESOURCE;
+import static org.quickfixj.util.FileUtil.Location.CONTEXT_RESOURCE;
+import static org.quickfixj.util.FileUtil.Location.FILESYSTEM;
+import static org.quickfixj.util.FileUtil.Location.URL;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,6 +38,17 @@ import java.util.Set;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.quickfixj.field.converter.BooleanConverter;
+import org.quickfixj.field.converter.CharConverter;
+import org.quickfixj.field.converter.DoubleConverter;
+import org.quickfixj.field.converter.IntConverter;
+import org.quickfixj.field.converter.UtcDateOnlyConverter;
+import org.quickfixj.field.converter.UtcTimeOnlyConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.UnsupportedVersion;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
@@ -45,15 +56,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import static quickfix.FieldDictionary.*;
-
-
-import quickfix.field.converter.BooleanConverter;
-import quickfix.field.converter.CharConverter;
-import quickfix.field.converter.DoubleConverter;
-import quickfix.field.converter.IntConverter;
-import quickfix.field.converter.UtcDateOnlyConverter;
-import quickfix.field.converter.UtcTimeOnlyConverter;
-import quickfix.field.converter.UtcTimestampConverter;
 
 /**
  * Provide the message metadata for various versions of FIX.

@@ -25,6 +25,7 @@ import java.lang.management.ThreadMXBean;
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertNull;
@@ -32,6 +33,8 @@ import static junit.framework.Assert.assertTrue;
 import static junit.framework.Assert.fail;
 
 import org.junit.Test;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

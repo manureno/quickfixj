@@ -31,6 +31,7 @@ import junit.framework.Assert;
 import org.logicalcobwebs.proxool.ProxoolException;
 import org.logicalcobwebs.proxool.ProxoolFacade;
 import org.logicalcobwebs.proxool.admin.SnapshotIF;
+import org.quickfixj.util.FileUtil;
 
 public class JdbcTestSupport {
     public static final String HSQL_DRIVER = "org.hsqldb.jdbcDriver";

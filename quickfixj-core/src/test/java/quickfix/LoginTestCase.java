@@ -20,7 +20,7 @@
 package quickfix;
 
 import static junit.framework.Assert.*;
-import static quickfix.FixVersions.*;
+import static org.quickfixj.util.FixVersions.*;
 
 import java.util.HashMap;
 import java.util.Map;

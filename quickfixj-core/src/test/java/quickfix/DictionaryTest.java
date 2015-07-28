@@ -21,6 +21,8 @@ package quickfix;
 
 import java.util.Locale;
 
+import org.quickfixj.util.ConfigError;
+
 import junit.framework.TestCase;
 
 public class DictionaryTest extends TestCase {

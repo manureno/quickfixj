@@ -23,11 +23,12 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
+import org.quickfixj.util.SystemTime;
+
 import quickfix.LogUtil;
 import quickfix.Message;
 import quickfix.Session;
 import quickfix.SessionID;
-import quickfix.SystemTime;
 
 /**
  * Processes messages for all sessions in a single thread.

@@ -37,15 +37,15 @@ import junit.framework.Assert;
 import junit.framework.TestSuite;
 
 import org.apache.mina.core.filterchain.IoFilterChainBuilder;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.RuntimeError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import quickfix.DefaultMessageFactory;
 import quickfix.FileStoreFactory;
-import quickfix.FixVersions;
 import quickfix.MemoryStoreFactory;
 import quickfix.MessageStoreFactory;
-import quickfix.RuntimeError;
 import quickfix.ScreenLogFactory;
 import quickfix.SessionID;
 import quickfix.SessionSettings;

@@ -17,18 +17,27 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix;
+package org.quickfixj.util;
 
 /**
- * Interface for obtaining system time. A system time source should be used
- * instead of direct system time to facilitate unit testing.
+ * Constants containing the BeginString field values for various FIX versions.
  */
-public interface SystemTimeSource {
+public interface FixVersions {
+    public static final String BEGINSTRING_FIX40 = "FIX.4.0";
+    public static final String BEGINSTRING_FIX41 = "FIX.4.1";
+    public static final String BEGINSTRING_FIX42 = "FIX.4.2";
+    public static final String BEGINSTRING_FIX43 = "FIX.4.3";
+    public static final String BEGINSTRING_FIX44 = "FIX.4.4";
 
     /**
-     * Obtain the current time.
-     *
-     * @return current (possible simulated) time
+     * FIX 5.0 does not have a begin string.
      */
-    long getTime();
+    public static final String FIX50 = "FIX.5.0";
+    public static final String FIX50SP1 = "FIX.5.0SP1";
+    public static final String FIX50SP2 = "FIX.5.0SP2";
+
+    // FIXT.x.x support
+
+    public static final String FIXT_SESSION_PREFIX = "FIXT.";
+    public static final String BEGINSTRING_FIXT11 = FIXT_SESSION_PREFIX + "1.1";
 }

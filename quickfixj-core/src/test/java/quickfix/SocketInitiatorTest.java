@@ -40,6 +40,9 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.core.write.WriteRequest;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

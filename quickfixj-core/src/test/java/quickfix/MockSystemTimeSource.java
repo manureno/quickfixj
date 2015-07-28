@@ -21,6 +21,8 @@ package quickfix;
 
 import java.util.Calendar;
 
+import org.quickfixj.util.SystemTimeSource;
+
 public class MockSystemTimeSource implements SystemTimeSource {
     private long[] systemTimes = { System.currentTimeMillis() };
     private int offset;

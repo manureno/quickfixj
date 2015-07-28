@@ -17,7 +17,7 @@
  * are not clear to you.
  ******************************************************************************/
 
-package org.quickfixj;
+package org.quickfixj.util;
 
 public class QFJException extends RuntimeException {
 

@@ -29,7 +29,7 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecException;
 import org.apache.mina.filter.codec.ProtocolEncoderOutput;
 import org.apache.mina.filter.codec.demux.MessageEncoder;
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
 
 import quickfix.Message;
 

@@ -29,6 +29,8 @@ import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 
+import org.quickfixj.util.ConfigError;
+
 import junit.framework.TestCase;
 
 public class SessionSettingsTest extends TestCase {

@@ -17,27 +17,27 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix;
+package org.quickfixj.util;
 
 /**
- * This exception is thrown when a configuration error is detected.
+ * Application encountered serious error during runtime.
  * (The "error" naming is from the C++ JNI API.)
  */
-public class ConfigError extends Exception {
+public class RuntimeError extends RuntimeException {
 
-    public ConfigError() {
+    public RuntimeError() {
         super();
     }
 
-    public ConfigError(String message) {
+    public RuntimeError(String message) {
         super(message);
     }
 
-    public ConfigError(Throwable cause) {
-        super(cause);
+    public RuntimeError(Throwable e) {
+        super(e);
     }
 
-    public ConfigError(String string, Throwable e) {
-        super(string, e);
+    public RuntimeError(String message, Throwable cause) {
+        super(message, cause);
     }
 }

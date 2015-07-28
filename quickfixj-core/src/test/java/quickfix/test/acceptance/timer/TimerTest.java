@@ -19,8 +19,9 @@
 
 package quickfix.test.acceptance.timer;
 
+import org.quickfixj.util.ConfigError;
+
 import junit.framework.TestCase;
-import quickfix.ConfigError;
 import quickfix.SessionNotFound;
 
 public class TimerTest extends TestCase {

@@ -32,16 +32,18 @@ import java.util.Date;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
 import static junit.framework.Assert.assertTrue;
+
 import org.junit.After;
 import org.junit.Before;
-
 import org.junit.Test;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
 
-import quickfix.ConfigError;
 import quickfix.DefaultSessionFactory;
 import quickfix.FieldNotFound;
-import quickfix.FixVersions;
 import quickfix.IncorrectDataFormat;
 import quickfix.IncorrectTagValue;
 import quickfix.MemoryStoreFactory;
@@ -59,7 +61,6 @@ import quickfix.field.MsgSeqNum;
 import quickfix.field.SenderCompID;
 import quickfix.field.SendingTime;
 import quickfix.field.TargetCompID;
-import quickfix.field.converter.UtcTimestampConverter;
 import quickfix.fix40.Logon;
 
 public class ThreadPerSessionEventHandlingStrategyTest {

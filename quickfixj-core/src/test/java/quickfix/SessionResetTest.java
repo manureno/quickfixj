@@ -15,6 +15,8 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 import org.junit.Test;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.SystemTime;
 
 import quickfix.field.BeginString;
 import quickfix.field.EncryptMethod;

@@ -28,13 +28,13 @@ import java.util.regex.Pattern;
 import junit.framework.AssertionFailedError;
 import junit.framework.TestResult;
 
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FixVersions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import quickfix.FixVersions;
 import quickfix.MessageUtils;
-import quickfix.field.converter.UtcTimestampConverter;
 
 public class InitiateMessageStep implements TestStep {
 

@@ -25,7 +25,8 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

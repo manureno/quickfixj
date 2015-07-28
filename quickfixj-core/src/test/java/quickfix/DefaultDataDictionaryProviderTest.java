@@ -25,7 +25,9 @@ import static quickfix.field.ApplVerID.*;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.quickfixj.QFJException;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.QFJException;
 
 import quickfix.field.ApplVerID;
 

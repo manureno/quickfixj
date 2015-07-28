@@ -35,7 +35,7 @@ import org.apache.mina.filter.codec.ProtocolCodecException;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 import org.apache.mina.filter.codec.demux.MessageDecoder;
 import org.apache.mina.filter.codec.demux.MessageDecoderResult;
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -31,6 +31,9 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.SystemTime;
+
 class JdbcLog extends AbstractLog {
     private static final String DEFAULT_MESSAGES_LOG_TABLE = "messages_log";
     private static final String DEFAULT_EVENT_LOG_TABLE = "event_log";

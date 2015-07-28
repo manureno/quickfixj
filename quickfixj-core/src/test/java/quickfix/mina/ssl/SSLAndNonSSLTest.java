@@ -27,13 +27,14 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import quickfix.ApplicationAdapter;
-import quickfix.ConfigError;
 import quickfix.DefaultMessageFactory;
-import quickfix.FixVersions;
 import quickfix.Initiator;
 import quickfix.MemoryStoreFactory;
 import quickfix.MessageStoreFactory;
@@ -42,7 +43,6 @@ import quickfix.Session;
 import quickfix.SessionID;
 import quickfix.SessionSettings;
 import quickfix.SocketAcceptor;
-import quickfix.SystemTime;
 import quickfix.ThreadedSocketInitiator;
 import quickfix.mina.ProtocolFactory;
 import quickfix.mina.acceptor.AbstractSocketAcceptor;

@@ -21,6 +21,8 @@ package quickfix;
 
 import javax.sql.DataSource;
 
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Creates a generic JDBC logger.
  */

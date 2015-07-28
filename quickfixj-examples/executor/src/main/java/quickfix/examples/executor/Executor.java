@@ -37,17 +37,17 @@ import javax.management.JMException;
 import javax.management.ObjectName;
 
 import org.quickfixj.jmx.JmxExporter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import quickfix.ConfigError;
 import quickfix.DefaultMessageFactory;
 import quickfix.FieldConvertError;
 import quickfix.FileStoreFactory;
 import quickfix.LogFactory;
 import quickfix.MessageFactory;
 import quickfix.MessageStoreFactory;
-import quickfix.RuntimeError;
 import quickfix.ScreenLogFactory;
 import quickfix.SessionID;
 import quickfix.SessionSettings;

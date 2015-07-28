@@ -25,6 +25,7 @@ import java.util.TimerTask;
 import java.util.concurrent.CountDownLatch;
 
 import org.apache.mina.util.AvailablePortFinder;
+import org.quickfixj.util.FixVersions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +33,6 @@ import quickfix.Application;
 import quickfix.DefaultMessageFactory;
 import quickfix.DoNotSend;
 import quickfix.FieldNotFound;
-import quickfix.FixVersions;
 import quickfix.IncorrectDataFormat;
 import quickfix.IncorrectTagValue;
 import quickfix.MemoryStoreFactory;

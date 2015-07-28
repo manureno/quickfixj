@@ -29,8 +29,8 @@ import javax.management.ObjectName;
 
 import org.quickfixj.jmx.JmxExporter;
 import org.quickfixj.jmx.mbean.ObjectNameFactory;
+import org.quickfixj.util.ConfigError;
 
-import quickfix.ConfigError;
 import quickfix.Session;
 import quickfix.SessionID;
 import quickfix.SessionSettings;

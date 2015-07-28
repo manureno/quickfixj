@@ -22,10 +22,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.management.MalformedObjectNameException;
 import javax.management.ObjectName;
 
-import org.quickfixj.QFJException;
 import org.quickfixj.jmx.JmxExporter;
 import org.quickfixj.jmx.mbean.ObjectNameFactory;
 import org.quickfixj.jmx.mbean.session.SessionJmxExporter;
+import org.quickfixj.util.QFJException;
 
 import quickfix.Acceptor;
 import quickfix.SessionID;

@@ -32,6 +32,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import org.logicalcobwebs.proxool.ProxoolDataSource;
+import org.quickfixj.util.ConfigError;
 
 class JdbcUtil {
 

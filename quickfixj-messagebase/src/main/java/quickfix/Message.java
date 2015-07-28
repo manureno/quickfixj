@@ -33,7 +33,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FixVersions;
 import org.w3c.dom.CDATASection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

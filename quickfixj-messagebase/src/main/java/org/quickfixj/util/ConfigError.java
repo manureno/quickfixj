@@ -17,11 +17,27 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix;
+package org.quickfixj.util;
 
-class UnsupportedVersion extends RuntimeException {
+/**
+ * This exception is thrown when a configuration error is detected.
+ * (The "error" naming is from the C++ JNI API.)
+ */
+public class ConfigError extends Exception {
 
-    public UnsupportedVersion(final String message) {
+    public ConfigError() {
+        super();
+    }
+
+    public ConfigError(String message) {
         super(message);
+    }
+
+    public ConfigError(Throwable cause) {
+        super(cause);
+    }
+
+    public ConfigError(String string, Throwable e) {
+        super(string, e);
     }
 }

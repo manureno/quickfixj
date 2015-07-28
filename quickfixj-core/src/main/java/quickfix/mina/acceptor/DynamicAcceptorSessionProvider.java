@@ -26,9 +26,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import org.quickfixj.QFJException;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.QFJException;
 
-import quickfix.ConfigError;
 import quickfix.DefaultSessionFactory;
 import quickfix.LogFactory;
 import quickfix.MessageFactory;

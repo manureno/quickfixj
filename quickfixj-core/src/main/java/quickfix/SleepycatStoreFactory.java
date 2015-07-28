@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Message store using the Sleepycat Java Edition database for message and
  * sequence number storage.

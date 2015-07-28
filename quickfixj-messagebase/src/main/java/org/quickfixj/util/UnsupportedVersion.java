@@ -17,27 +17,11 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix;
+package org.quickfixj.util;
 
-/**
- * Application encountered serious error during runtime.
- * (The "error" naming is from the C++ JNI API.)
- */
-public class RuntimeError extends RuntimeException {
+public class UnsupportedVersion extends RuntimeException {
 
-    public RuntimeError() {
-        super();
-    }
-
-    public RuntimeError(String message) {
+    public UnsupportedVersion(final String message) {
         super(message);
-    }
-
-    public RuntimeError(Throwable e) {
-        super(e);
-    }
-
-    public RuntimeError(String message, Throwable cause) {
-        super(message, cause);
     }
 }

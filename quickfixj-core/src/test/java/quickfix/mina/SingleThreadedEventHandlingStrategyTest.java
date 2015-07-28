@@ -22,12 +22,15 @@ package quickfix.mina;
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
+
 import static junit.framework.Assert.assertEquals;
+
 import org.junit.Test;
-import quickfix.ConfigError;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
+
 import quickfix.DefaultSessionFactory;
 import quickfix.MemoryStoreFactory;
-import quickfix.RuntimeError;
 import quickfix.ScreenLogFactory;
 import quickfix.SessionFactory;
 import quickfix.SessionSettings;

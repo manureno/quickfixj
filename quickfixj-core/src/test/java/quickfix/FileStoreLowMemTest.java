@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.ConfigError;
+
 public class FileStoreLowMemTest extends FileStoreTest {
     @Override
     protected MessageStoreFactory getMessageStoreFactory() throws ConfigError, FieldConvertError {

@@ -21,7 +21,7 @@ package quickfix;
 
 import java.io.UnsupportedEncodingException;
 
-import org.quickfixj.QFJException;
+import org.quickfixj.util.QFJException;
 
 /**
  * BytesField enables better handling of binary data. With BytesFields binary data can

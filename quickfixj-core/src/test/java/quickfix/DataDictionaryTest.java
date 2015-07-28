@@ -23,6 +23,10 @@ import java.io.ByteArrayInputStream;
 import java.net.URL;
 import java.net.URLClassLoader;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.UnsupportedVersion;
+
 import junit.framework.TestCase;
 import quickfix.field.Account;
 import quickfix.field.BodyLength;

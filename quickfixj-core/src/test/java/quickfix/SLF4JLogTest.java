@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 
 import junit.framework.TestCase;
 
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Marker;
 import org.slf4j.spi.LocationAwareLogger;
 

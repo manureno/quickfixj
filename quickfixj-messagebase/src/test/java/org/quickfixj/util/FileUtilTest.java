@@ -17,7 +17,7 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix;
+package org.quickfixj.util;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -27,11 +27,11 @@ import java.io.InputStream;
 import java.net.Socket;
 
 import org.junit.Test;
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.FileUtil.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import quickfix.FileUtil.Location;
 
 public class FileUtilTest {
     private final Logger log = LoggerFactory.getLogger(getClass());

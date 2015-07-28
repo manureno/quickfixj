@@ -24,7 +24,8 @@ import static quickfix.MessageUtils.*;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.quickfixj.QFJException;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.QFJException;
 
 import quickfix.field.ApplVerID;
 

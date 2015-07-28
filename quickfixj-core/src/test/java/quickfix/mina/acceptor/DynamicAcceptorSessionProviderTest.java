@@ -27,7 +27,9 @@ import java.util.HashMap;
 
 import junit.framework.TestCase;
 
-import org.quickfixj.QFJException;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.QFJException;
+import org.quickfixj.util.RuntimeError;
 
 import quickfix.*;
 import quickfix.mina.acceptor.DynamicAcceptorSessionProvider.TemplateMapping;

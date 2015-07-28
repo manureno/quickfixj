@@ -28,6 +28,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import org.quickfixj.util.RuntimeError;
+import org.quickfixj.util.SystemTime;
+
 /**
  * Used by the session communications code. Not intended to be used by applications. All dynamic data is protected by
  * the session's intrinsic lock. The log and message store implementation must be thread safe.

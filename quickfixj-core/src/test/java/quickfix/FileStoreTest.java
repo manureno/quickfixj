@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.quickfixj.util.ConfigError;
+
 public class FileStoreTest extends AbstractMessageStoreTest {
 
     protected void tearDown() throws Exception {

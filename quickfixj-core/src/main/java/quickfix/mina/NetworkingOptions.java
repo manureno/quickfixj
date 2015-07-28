@@ -27,12 +27,12 @@ import java.util.Properties;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.core.session.IoSessionConfig;
 import org.apache.mina.transport.socket.SocketSessionConfig;
+import org.quickfixj.field.converter.BooleanConverter;
+import org.quickfixj.field.converter.IntConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import quickfix.FieldConvertError;
-import quickfix.field.converter.BooleanConverter;
-import quickfix.field.converter.IntConverter;
 
 /**
  * This class holds the QFJ settings information related to networking options.

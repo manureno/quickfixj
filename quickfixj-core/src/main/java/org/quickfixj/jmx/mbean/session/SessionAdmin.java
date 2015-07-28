@@ -17,13 +17,14 @@
 
 package org.quickfixj.jmx.mbean.session;
 
-import org.quickfixj.QFJException;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.QFJException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import quickfix.*;
 import quickfix.field.MsgType;
 import quickfix.field.NewSeqNo;
-import quickfix.field.converter.UtcTimestampConverter;
 
 import javax.management.*;
 

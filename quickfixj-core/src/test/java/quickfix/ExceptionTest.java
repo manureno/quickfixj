@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.RuntimeError;
+
 import junit.framework.TestCase;
 
 public class ExceptionTest extends TestCase {

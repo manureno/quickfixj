@@ -34,13 +34,13 @@ import org.apache.mina.core.filterchain.IoFilterChainBuilder;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.ssl.SslFilter;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.SystemTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import quickfix.ConfigError;
 import quickfix.LogUtil;
 import quickfix.Session;
-import quickfix.SystemTime;
 import quickfix.mina.CompositeIoFilterChainBuilder;
 import quickfix.mina.EventHandlingStrategy;
 import quickfix.mina.NetworkingOptions;

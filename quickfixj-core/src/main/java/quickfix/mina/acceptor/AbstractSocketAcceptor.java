@@ -34,16 +34,16 @@ import org.apache.mina.core.service.IoAcceptor;
 import org.apache.mina.core.buffer.SimpleBufferAllocator;
 import org.apache.mina.filter.ssl.SslFilter;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
 
 import quickfix.Acceptor;
 import quickfix.Application;
-import quickfix.ConfigError;
 import quickfix.DefaultSessionFactory;
 import quickfix.FieldConvertError;
 import quickfix.LogFactory;
 import quickfix.MessageFactory;
 import quickfix.MessageStoreFactory;
-import quickfix.RuntimeError;
 import quickfix.ScreenLogFactory;
 import quickfix.Session;
 import quickfix.SessionFactory;

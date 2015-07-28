@@ -19,7 +19,7 @@
 
 package quickfix;
 
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
 
 import java.io.Serializable;
 

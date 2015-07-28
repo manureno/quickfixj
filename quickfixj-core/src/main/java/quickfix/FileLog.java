@@ -26,9 +26,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
-import org.quickfixj.CharsetSupport;
-
-import quickfix.field.converter.UtcTimestampConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.FileUtil;
+import org.quickfixj.util.SystemTime;
 
 /**
  * File log implementation. THIS CLASS IS PUBLIC ONLY TO MAINTAIN COMPATIBILITY

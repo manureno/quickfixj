@@ -25,7 +25,7 @@ import junit.framework.ComparisonFailure;
 import junit.framework.TestCase;
 
 import org.apache.mina.filter.codec.ProtocolCodecException;
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
 
 import quickfix.Message;
 import quickfix.field.Headline;

@@ -24,6 +24,9 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Date;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.SystemTime;
+
 import junit.framework.TestCase;
 
 public class LogUtilTest extends TestCase {

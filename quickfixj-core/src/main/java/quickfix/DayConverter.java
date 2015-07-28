@@ -23,6 +23,8 @@ import java.text.DateFormatSymbols;
 import java.util.Arrays;
 import java.util.Locale;
 
+import org.quickfixj.util.ConfigError;
+
 /**
  * Utility class for converting between day names and offsets. This method handles
  * international week day names based on the default locale.

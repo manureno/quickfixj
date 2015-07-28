@@ -1,5 +1,7 @@
 package quickfix;
 
+import org.quickfixj.util.ConfigError;
+
 import quickfix.field.DefaultApplVerID;
 
 public class SessionFactoryTestSupport implements SessionFactory {

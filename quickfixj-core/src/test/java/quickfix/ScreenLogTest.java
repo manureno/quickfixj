@@ -23,7 +23,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Date;
 
-import quickfix.field.converter.UtcTimestampConverter;
+import org.quickfixj.field.converter.UtcTimestampConverter;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.SystemTime;
 
 import junit.framework.TestCase;
 

@@ -22,10 +22,10 @@ package quickfix;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.quickfixj.QFJException;
+import org.quickfixj.util.FixVersions;
+import org.quickfixj.util.QFJException;
 
 import quickfix.Message.Header;
-
 import quickfix.field.ApplVerID;
 import quickfix.field.BeginString;
 import quickfix.field.DefaultApplVerID;

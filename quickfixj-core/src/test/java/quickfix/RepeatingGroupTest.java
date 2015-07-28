@@ -19,7 +19,8 @@
 
 package quickfix;
 
-import org.quickfixj.CharsetSupport;
+import org.quickfixj.util.CharsetSupport;
+import org.quickfixj.util.ConfigError;
 
 import junit.framework.Assert;
 import junit.framework.TestCase;

@@ -31,8 +31,8 @@ import java.util.Properties;
 
 import org.apache.mina.core.session.IoSession;
 import org.junit.Test;
+import org.quickfixj.util.FixVersions;
 
-import quickfix.FixVersions;
 import quickfix.Session;
 import quickfix.SessionFactoryTestSupport;
 import quickfix.SessionID;

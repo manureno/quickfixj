@@ -19,7 +19,7 @@
 
 package quickfix;
 
-import static quickfix.FixVersions.*;
+import static org.quickfixj.util.FixVersions.*;
 import quickfix.field.MsgType;
 
 import java.util.Map;

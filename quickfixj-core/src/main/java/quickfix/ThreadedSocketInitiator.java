@@ -19,6 +19,9 @@
 
 package quickfix;
 
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
+
 import quickfix.mina.EventHandlingStrategy;
 import quickfix.mina.ThreadPerSessionEventHandlingStrategy;
 import quickfix.mina.initiator.AbstractSocketInitiator;

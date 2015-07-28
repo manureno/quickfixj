@@ -19,6 +19,8 @@
 
 package quickfix;
 
+import org.quickfixj.util.RuntimeError;
+
 /**
  * Factory for creating file-based loggers. See SessionSettings for
  * configuration.

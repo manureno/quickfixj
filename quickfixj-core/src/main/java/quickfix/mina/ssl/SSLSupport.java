@@ -19,9 +19,10 @@
 
 package quickfix.mina.ssl;
 
+import org.quickfixj.util.ConfigError;
+
 import quickfix.SessionID;
 import quickfix.SessionSettings;
-import quickfix.ConfigError;
 import quickfix.FieldConvertError;
 
 public class SSLSupport {

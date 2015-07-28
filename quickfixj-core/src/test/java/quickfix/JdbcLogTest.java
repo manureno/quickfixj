@@ -26,6 +26,8 @@ import java.sql.Statement;
 
 import javax.sql.DataSource;
 
+import org.quickfixj.util.ConfigError;
+
 import junit.framework.TestCase;
 
 public class JdbcLogTest extends TestCase {

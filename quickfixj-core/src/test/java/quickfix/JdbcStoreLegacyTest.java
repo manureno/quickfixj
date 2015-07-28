@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import org.quickfixj.util.ConfigError;
+
 public class JdbcStoreLegacyTest extends JdbcStoreTest {
 
     /**

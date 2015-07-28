@@ -1,4 +1,4 @@
-package quickfixj;
+package quickfix;
 
 import junit.framework.TestCase;
 

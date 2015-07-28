@@ -42,10 +42,10 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.quickfixj.field.converter.BooleanConverter;
+import org.quickfixj.util.ConfigError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import quickfix.field.converter.BooleanConverter;
 
 /**
  * Settings for sessions. Settings are grouped by FIX version and target company

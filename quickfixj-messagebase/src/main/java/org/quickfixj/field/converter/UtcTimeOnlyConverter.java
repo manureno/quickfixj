@@ -17,7 +17,7 @@
  * are not clear to you.
  ******************************************************************************/
 
-package quickfix.field.converter;
+package org.quickfixj.field.converter;
 
 import java.text.DateFormat;
 import java.text.ParseException;

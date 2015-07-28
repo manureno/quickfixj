@@ -38,8 +38,9 @@ import java.util.TimeZone;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import quickfix.field.converter.UtcTimeOnlyConverter;
+import org.quickfixj.field.converter.UtcTimeOnlyConverter;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.SystemTime;
 
 public class SessionScheduleTest {
     private MockSystemTimeSource mockSystemTimeSource;

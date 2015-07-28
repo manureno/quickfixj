@@ -31,11 +31,11 @@ import javax.management.ObjectName;
 import javax.management.openmbean.OpenDataException;
 import javax.management.openmbean.TabularData;
 
-import org.quickfixj.QFJException;
 import org.quickfixj.jmx.JmxExporter;
 import org.quickfixj.jmx.mbean.JmxSupport;
 import org.quickfixj.jmx.mbean.session.SessionJmxExporter;
 import org.quickfixj.jmx.openmbean.TabularDataAdapter;
+import org.quickfixj.util.QFJException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -29,6 +29,7 @@ import java.io.InvalidObjectException;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.quickfixj.util.FixVersions;
 
 import quickfix.MessageCracker.RedundantHandlerException;
 import quickfix.field.ApplVerID;

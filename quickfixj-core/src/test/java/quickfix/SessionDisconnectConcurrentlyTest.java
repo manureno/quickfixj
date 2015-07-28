@@ -31,6 +31,8 @@ import java.util.concurrent.TimeUnit;
 import junit.framework.TestCase;
 
 import org.junit.Test;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.FixVersions;
 
 import quickfix.field.TestReqID;
 import quickfix.fix42.TestRequest;

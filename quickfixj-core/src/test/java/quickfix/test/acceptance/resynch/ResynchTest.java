@@ -22,8 +22,8 @@ package quickfix.test.acceptance.resynch;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.quickfixj.util.ConfigError;
 
-import quickfix.ConfigError;
 import quickfix.SessionNotFound;
 
 /**

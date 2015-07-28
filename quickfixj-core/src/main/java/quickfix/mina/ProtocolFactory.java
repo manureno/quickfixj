@@ -29,9 +29,8 @@ import org.apache.mina.transport.socket.nio.NioSocketConnector;
 import org.apache.mina.transport.vmpipe.VmPipeAcceptor;
 import org.apache.mina.transport.vmpipe.VmPipeAddress;
 import org.apache.mina.transport.vmpipe.VmPipeConnector;
-
-import quickfix.ConfigError;
-import quickfix.RuntimeError;
+import org.quickfixj.util.ConfigError;
+import org.quickfixj.util.RuntimeError;
 
 /**
  * A utility class for creating addresses and connection-related objects
